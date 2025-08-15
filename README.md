@@ -1,2 +1,209 @@
-# Porfolio
-My Porfolio
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Waleed — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0b0f;/* deep black */
+      --card:#11131a;/* card black */
+      --muted:#a3a3ad;/* subtle gray */
+      --text:#f3f4f6;/* near-white */
+      --accent:#7c5cff;/* soft violet */
+      --ring:#2a2a35;
+      --pill:#1b1e28;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:radial-gradient(1200px 700px at 80% -10%, rgba(124,92,255,.15), transparent 60%), var(--bg);color:var(--text);font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:980px;margin:0 auto;padding:28px 20px 80px}
+    header{position:sticky;top:0;background:linear-gradient(to bottom, rgba(11,11,15,.9), rgba(11,11,15,.6) 60%, transparent);backdrop-filter:saturate(150%) blur(6px);z-index:10}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid var(--ring)}
+    .brand{display:flex;gap:12px;align-items:center}
+    .brand .avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--accent),#3a86ff);display:grid;place-items:center;font-weight:800;}
+    .brand .avatar span{filter:drop-shadow(0 2px 6px rgba(124,92,255,.6))}
+    .brand h1{font-size:18px;margin:0}
+    .nav a{font-size:14px;padding:8px 10px;border-radius:10px}
+    .nav a:hover{background:var(--pill)}
+
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;margin-top:18px;padding-top:8px}
+    .hero .title{font-size:40px;font-weight:800;line-height:1.05;margin:0}
+    .hero .subtitle{color:var(--muted);margin:12px 0 0}
+    .hero-card{background:linear-gradient(180deg, rgba(124,92,255,.08), rgba(124,92,255,0) 40%), var(--card);border:1px solid var(--ring);padding:18px 18px;border-radius:18px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+    .row{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px}
+    .pill{background:var(--pill);padding:8px 12px;border:1px solid var(--ring);border-radius:999px;font-size:13px}
+
+    section{margin-top:40px}
+    section h2{font-size:18px;font-weight:700;margin:0 0 14px 0;letter-spacing:.3px}
+    .cards{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+    .card{grid-column:span 12;background:var(--card);border:1px solid var(--ring);border-radius:16px;padding:16px;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+    .card.tight{padding:12px}
+    .card h3{margin:0 0 6px 0;font-size:16px}
+    .card p{margin:6px 0 0;color:var(--muted);font-size:14px}
+
+    .edu{display:flex;justify-content:space-between;gap:10px;align-items:center}
+    .edu .right{color:var(--muted);font-size:13px}
+
+    .projects .project{display:flex;flex-direction:column;gap:10px}
+    .projects .tags{display:flex;gap:8px;flex-wrap:wrap}
+    .projects .tags .pill{font-size:12px}
+    .projects .links{display:flex;gap:10px}
+    .btn{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border-radius:10px;border:1px solid var(--ring);background:transparent}
+    .btn:hover{background:var(--pill)}
+
+    footer{margin-top:60px;color:var(--muted);font-size:13px}
+
+    @media (max-width:860px){
+      .hero{grid-template-columns:1fr}
+      .hero .title{font-size:34px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="avatar"><span>WH</span></div>
+        <h1>Waleed Hoth</h1>
+      </div>
+      <nav class="links">
+        <a href="#profile">Profile</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO / PROFILE -->
+    <section id="profile" class="hero">
+      <div>
+        <h2 class="subtitle">Portfolio</h2>
+        <h1 class="title">Aspiring Website Developer & Computer Science Science Student</h1>
+        <p class="subtitle">Focused on clean code, practical problem‑solving, and building projects that help people. Open to internships and junior roles.</p>
+        <div class="row" style="margin-top:16px">
+          <a class="btn" href="mailto:waleed2209e@aptechgdn.net">📧 Email</a>
+          <a class="btn" href="https://github.com/Waleed-baloch" target="_blank" rel="noreferrer">💻 GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/waleed-140860260/" target="_blank" rel="noreferrer">🔗 LinkedIn</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <strong>Quick facts</strong>
+        <div class="row">
+          <span class="pill">Karachi, PK</span>
+          <span class="pill">Open to Remote</span>
+          <span class="pill">Football ⚽ fan</span>
+        </div>
+        <p style="margin-top:10px;color:var(--muted);font-size:14px">I enjoy building web apps and data projects. Currently exploring ML fundamentals and shipping small, useful tools.</p>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="card tight">
+        <div class="row">
+          <!-- Edit your skills here -->
+          <span class="pill">Python</span>
+          <span class="pill">C / C++ Basics</span>
+          <span class="pill">HTML • CSS • JS</span>
+          <span class="pill">Git & GitHub</span>
+          <span class="pill">Data Analysis (Tableau)</span>
+          <span class="pill">Colab</span>
+          <span class="pill">SQL \ Mongo DB</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+      <h2>Education</h2>
+      <div class="cards">
+        <div class="card edu">
+          <div>
+            <h3>BS — Computer Science (Ongoing)</h3>
+            <p>Benazir Bhutto Shaheed University, Karachi</p>
+          </div>
+          <div class="right">2025 — Present</div>
+        </div>
+        <div class="card edu">
+          <div>
+            <h3>Intermediate / Pre‑Engineering</h3>
+            <p>Goverment College Sakro, Sakro</p>
+          </div>
+          <div class="right">2023 — 2025</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="projects">
+      <h2>Projects</h2>
+      <div class="cards">
+        <!-- Example Project 1 -->
+        <article class="card project">
+          <div>
+            <h3>EduPredict — Student Retention Analytics</h3>
+            <p>Built a data pipeline and notebook to explore student retention using sample datasets; experimented with feature engineering and baseline models.</p>
+          </div>
+          <div class="tags">
+            <span class="pill">Python</span>
+            <span class="pill">Colab</span>
+          </div>
+          <div class="links">
+            <a class="btn" href="#" target="_blank" rel="noreferrer">Repo</a>
+            <a class="btn" href="https://colab.research.google.com/drive/1jmYy3aYHvB9wsHdZwn6nVeXSXVikvp5U?usp=drive_link" target="_blank" rel="noreferrer">Notebook</a>
+          </div>
+        </article>
+
+        <!-- Example Project 2 -->
+        <article class="card project">
+          <div>
+            <h3>Health Insureance</h3>
+            <p>A Website that suggests Health Insureance Plan According to thir needs.</p>
+          </div>
+          <div class="tags">
+            <span class="pill">C#</span>
+            <span class="pill">HTML/CSS</span>
+            <span class="pill">JavaScript</span>
+          </div>
+          <div class="links">
+            <a class="btn" href="#" target="_blank" rel="noreferrer">Demo</a>
+            <a class="btn" href="https://github.com/Zaayan325/Health_Insurance_MGMT" target="_blank" rel="noreferrer">Repo</a>
+          </div>
+        </article>
+
+        <!-- Example Project 3 -->
+        <article class="card project">
+          <div>
+            <h3>ITM College</h3>
+            <p>A Website For A College Admissions.</p>
+          </div>
+          <div class="tags">
+            <span class="pill">Laravel</span>
+            <span class="pill">PHP</span>
+          </div>
+          <div class="links">
+            <a class="btn" href="https://github.com/fareedmunawar/Eproject_3rd_Sem.git" target="_blank" rel="noreferrer">Repo</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <span id="year"></span> Waleed Hoth • Built with ❤️ in Codespaces</div>
+    </footer>
+  </main>
+
+  <script>
+    // Auto year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
